@@ -1,0 +1,27 @@
+<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="16" height="15" fill="#F5F5F5"/>
+<g id="homepage/aktivitaeten/desktop" clip-path="url(#clip0_180_1667)">
+<rect width="1512" height="4764" transform="translate(-666 -2816)" fill="white"/>
+<g id="star">
+<rect x="-538.604" y="-14.6045" width="1254.21" height="44.521" rx="9.24736" fill="#4F4F4F"/>
+<g id="star 5" clip-path="url(#clip1_180_1667)">
+<mask id="mask0_180_1667" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="15">
+<path id="Vector" d="M14.9763 5.99866C14.8831 5.71036 14.6274 5.50559 14.3248 5.47832L10.2154 5.10518L8.59035 1.30171C8.47053 1.02296 8.19765 0.842529 7.89447 0.842529C7.59128 0.842529 7.3184 1.02296 7.19858 1.30236L5.57358 5.10518L1.46345 5.47832C1.16146 5.50624 0.906397 5.71036 0.812649 5.99866C0.718901 6.28697 0.805479 6.60319 1.03393 6.80252L4.14021 9.52675L3.22424 13.5616C3.15721 13.8583 3.27236 14.1649 3.51852 14.3429C3.65083 14.4385 3.80563 14.4871 3.96173 14.4871C4.09632 14.4871 4.22983 14.4508 4.34965 14.3792L7.89447 12.2605L11.438 14.3792C11.6973 14.5351 12.0242 14.5209 12.2698 14.3429C12.516 14.1644 12.6311 13.8576 12.564 13.5616L11.6481 9.52675L14.7544 6.80307C14.9828 6.60319 15.07 6.28751 14.9763 5.99866Z" fill="#C5C5C5"/>
+</mask>
+<g mask="url(#mask0_180_1667)">
+<rect id="Rectangle 86" x="-0.015625" y="0.932495" width="18.984" height="13.447" fill="#C5C5C5"/>
+<rect id="Rectangle 87" x="-11.0898" y="0.932495" width="18.984" height="13.447" fill="#FFB543"/>
+</g>
+</g>
+<rect x="-538.604" y="-14.6045" width="1254.21" height="44.521" rx="9.24736" stroke="#F0F0F0" stroke-width="0.791001"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_180_1667">
+<rect width="1512" height="4764" fill="white" transform="translate(-666 -2816)"/>
+</clipPath>
+<clipPath id="clip1_180_1667">
+<rect width="14.238" height="14.238" fill="white" transform="translate(0.775391 0.536987)"/>
+</clipPath>
+</defs>
+</svg>

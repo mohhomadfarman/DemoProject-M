@@ -1,0 +1,23 @@
+<svg width="31" height="36" viewBox="0 0 31 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="31" height="36" fill="#F5F5F5"/>
+<g id="homepage/aktivitaeten/desktop" clip-path="url(#clip0_180_1667)">
+<rect width="1512" height="4764" transform="translate(-141 -1112)" fill="white"/>
+<g id="Frame 25">
+<g id="Frame 16">
+<rect x="-15.2435" y="-11.2435" width="523.487" height="59.0058" fill="white"/>
+<g id="fa-solid:parking" clip-path="url(#clip1_180_1667)">
+<path id="Vector" d="M27.6599 3.1297H3.88465C2.09476 3.1297 0.642578 4.58188 0.642578 6.37177V30.147C0.642578 31.9369 2.09476 33.3891 3.88465 33.3891H27.6599C29.4498 33.3891 30.9019 31.9369 30.9019 30.147V6.37177C30.9019 4.58188 29.4498 3.1297 27.6599 3.1297ZM16.853 22.5821H13.6109V25.8242C13.6109 26.4186 13.1246 26.9049 12.5302 26.9049H10.3688C9.77442 26.9049 9.28811 26.4186 9.28811 25.8242V10.6945C9.28811 10.1002 9.77442 9.61385 10.3688 9.61385H16.853C20.426 9.61385 23.3371 12.525 23.3371 16.098C23.3371 19.671 20.426 22.5821 16.853 22.5821ZM16.853 13.9366H13.6109V18.2594H16.853C18.0417 18.2594 19.0143 17.2868 19.0143 16.098C19.0143 14.9092 18.0417 13.9366 16.853 13.9366Z" fill="#4F4F4F"/>
+</g>
+<rect x="-15.2435" y="-11.2435" width="523.487" height="59.0058" stroke="white" stroke-width="1.51297"/>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_180_1667">
+<rect width="1512" height="4764" fill="white" transform="translate(-141 -1112)"/>
+</clipPath>
+<clipPath id="clip1_180_1667">
+<rect width="30.2594" height="34.5821" fill="white" transform="translate(0.642578 0.968262)"/>
+</clipPath>
+</defs>
+</svg>
