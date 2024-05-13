@@ -1,21 +1,24 @@
 import React from "react";
-import Swiper from "swiper";
-import { SwiperSlide } from "swiper/react";
 
-function Slider({ length }) {
+import { SwiperSlide, Swiper } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+function Slider(props) {
+  const length = props.length;
   return (
     <div>
       <Swiper
-        slidesPerView={3}
+        slidesPerView={props.slidesPerView}
         spaceBetween={30}
         pagination={{
           clickable: true,
         }}
         className="mySwiper"
       >
-        {Array.from({ length }, (_, i) => (
-          <SwiperSlide key={i}>
-            <div className="card border-0 rounded-0 w-100 fav-icon">
+        {" "}
+        {Array.from({ length: length }, (_, i) => (
+          <SwiperSlide>
+            <div key={i} className="card border-0 rounded-0 w-100 fav-icon">
               {/* Set up your HTML */}
               <div
                 id={`carouselExampleAutoplaying${i}`}
