@@ -11,3 +11,96 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.input-form {
+  display: flex;
+  align-items: center;
+}
+
+
+
+.range-container {
+  display: flex;
+  align-items: center;
+}
+
+.range-input {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;  /* Adjust the width as needed */
+  height: 4px;  /* Thin height */
+  background: #4f4f4f;  /* Gray color */
+  outline: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.range-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;  /* Size of the thumb */
+  height: 15px;
+  background: #4f4f4f;  /* Color of the thumb */
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.range-input::-moz-range-thumb {
+  width: 15px;  /* Size of the thumb */
+  height: 15px;
+  background: #4f4f4f;  /* Color of the thumb */
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+
+.range-form {
+  width: 100%;
+  margin: auto;
+  /* position: absolute; */
+  padding: 0;
+  top: 28px;
+  left: 125px;
+}
+
+
+.tabs-mein{
+  border: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.tabs-mein.nav-tabs .nav-item.show .nav-link, .tabs-mein.nav-tabs .nav-link.active{
+  color: #4f4f4f !important;
+    background-color: #41d6b2 !important;
+    border-color: var(--bs-nav-tabs-link-active-border-color);
+    border: 0  !important;
+}
+.tabs-mein.nav-tabs .nav-link:focus, .tabs-mein.nav-tabs .nav-link:hover {
+  isolation: isolate;
+  border-color: #fff;
+  border: 0  !important;
+}
+.tabs-mein.nav-tabs .nav-link:focus, .tabs-mein.nav-tabs .nav-link
+{
+  background-color: #fff;
+  color: #4f4f4f !important;
+  border: 0  !important;
+}
+
+.tabs-mein.nav-tabs .nav-item:nth-child(1) .nav-link
+{
+
+  border-top-left-radius: 4px  !important;
+  border-bottom-left-radius: 4px  !important;
+  border-top-right-radius: 0  !important;
+  border-bottom-right-radius: 0  !important;
+}
+.tabs-mein.nav-tabs .nav-item:nth-child(2) .nav-link
+{
+
+  border-top-right-radius: 4px  !important;
+  border-bottom-right-radius: 4px  !important;
+  border-top-left-radius: 0  !important;
+  border-bottom-left-radius: 0  !important;
+}

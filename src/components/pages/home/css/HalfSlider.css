@@ -1,0 +1,13 @@
+
+@media (min-width:990px) {
+    .hlf-slider
+{
+    position: absolute;
+    right: 0;
+    width: 50%;
+}
+.section-2-body
+{
+  min-height: 500px;
+}
+}

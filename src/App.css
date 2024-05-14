@@ -886,11 +886,12 @@ header {
   border: 0;
   outline: 0;
 }
-.input-form input {
+.input-form input:not() {
   white-space: nowrap;
-  overflow: hidden;
+  /* overflow: hidden; */
   text-overflow: ellipsis;
 }
+
 .input-form input::placeholder {
   color: var(--mallorcadark);
   font-family: var(--text-dektop-black);
@@ -916,6 +917,7 @@ header {
   outline: none;
   box-shadow: none;
 }
+
 .section-2-body h2 {
   color: var(--mallorca-purple, #550076);
 
@@ -1017,12 +1019,19 @@ header {
   justify-content: center;
   align-items: center;
 }
+.full-sm-img a{
+  text-decoration: none;
+}
+.fs-24{
+  font-size: 25.7px !important;
+}
 .full-sm-img h2 {
   color: var(--mmallorca-milk, #fff);
   font-family: "Gazpacho";
   font-size: 50.922px;
   font-style: normal;
   font-weight: 900;
+  
 }
 .Footer-link {
   display: flex;
@@ -1063,16 +1072,19 @@ header {
 .Round-input-form {
   width: 100%;
   border-radius: 63.154px;
-  border: 1.263px solid var(--mallorca-gray, #ededed);
+  border: 1.263px solid var(--mallorca-gray, #696969);
   opacity: 1;
-  background: var(--mallorca-gray, #ededed);
+  background: var(--mallorca-gray, #fff);
   padding: 13px 10px;
   margin-top: 10px;
   white-space: nowrap;
   overflow: hidden;
 }
-.Round-input-form input {
+.Round-input-form.dark{
   background: var(--mallorca-gray, #ededed);
+}
+.Round-input-form input {
+ 
   color: var(--mallorca-dark, #000);
   font-family: "Lexend", sans-serif;
   font-size: 13.385px;
@@ -1096,8 +1108,9 @@ header {
   border: 1.263px solid var(--mallorca-gray, #4f4f4f);
   background-color: #fff;
 }
-.Round-input-form.white input {
-  background-color: #fff;
+.Round-input-form.dark input {
+  /* background-color: #fff; */
+  background: var(--mallorca-gray, #ededed);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

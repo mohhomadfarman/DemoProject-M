@@ -6,9 +6,9 @@ function Accommodation() {
       <section className="pb-0 padding-0-990 padd-images">
         <div className="container">
           <div className="row g-1">
-            <div className="col-md-4">
+            <div className="col-md-3">
               <div
-                className="input-form"
+                className="input-form overflow-hidden"
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal2"
               >
@@ -160,29 +160,65 @@ function Accommodation() {
                 </div>
               </div>
             </div>
-            <div className="col-sm-10 col-md-3 col-5">
-              <div className="Round-input-form">
-                <img src="/fa-solid_hotel.svg" alt="" />
+            <div className="col-sm-10 col-md-2 col-2">
+              <label htmlFor="location" className="Round-input-form dark">
+                <img src="https://demogswebtech.com/mallorca/public/images/custom-img/sighting.svg" alt="" />
                 <input
-                  type="text"
+                  type="radio"
                   className="border-0"
                   placeholder="Hotel"
-                  name="Location"
-                  id=""
+                  value={"location"}
+                  hidden={true}
+                  name="listing"
+                  id="location"
                 />
-              </div>
+                Searched results
+              </label>
             </div>
-            <div className="col-sm-12 col-md-3 col-5">
-              <div className="Round-input-form white">
-                <img src="/ion_haus.svg" alt="" />
+            <div className="col-sm-12 col-md-2 col-2">
+              <label htmlFor="apartments" className="Round-input-form ">
+                <img src="https://demogswebtech.com/mallorca/public/images/custom-img/water-activity.svg" alt="" />
                 <input
-                  type="text"
+                  type="radio"
                   className="border-0"
-                  placeholder="Apartments."
-                  name="Location"
-                  id=""
+                  hidden={true}
+                  placeholder="Apartments"
+                  value={"apartments"}
+                  name="listing"
+                  id="apartments"
                 />
-              </div>
+                Water activities
+              </label>
+            </div>
+            <div className="col-sm-12 col-md-2 col-2">
+              <label htmlFor="apartments" className="Round-input-form ">
+                <img src="https://demogswebtech.com/mallorca/public/images/custom-img/tour.svg" alt="" />
+                <input
+                  type="radio"
+                  className="border-0"
+                  hidden={true}
+                  placeholder="Apartments"
+                  value={"apartments"}
+                  name="listing"
+                  id="apartments"
+                />
+               Tours & Adventures 
+              </label>
+            </div>
+            <div className="col-sm-12 col-md-2 col-2">
+              <label htmlFor="apartments" className="Round-input-form ">
+                <img src="https://demogswebtech.com/mallorca/public/images/custom-img/foods-drink.svg" alt="" />
+                <input
+                  type="radio"
+                  className="border-0"
+                  hidden={true}
+                  placeholder="Apartments"
+                  value={"apartments"}
+                  name="listing"
+                  id="apartments"
+                />
+                Food and Drink
+              </label>
             </div>
           </div>
         </div>
@@ -221,7 +257,7 @@ function Accommodation() {
                 {/* pagination */}
                 <div class="col-md-12">
                   <nav aria-label="Page navigation example w-100 Pagination-points">
-                    <ul class="pagination justify-content-between">
+                    <ul class="pagination">
                       <li class="page-item border-0">
                         <a class="page-link border-0" href="#">
                           <i class="bi bi-arrow-left"></i>
@@ -249,7 +285,7 @@ function Accommodation() {
                       </li>
                       <li class="page-item border-0">
                         <a class="page-link border-0" href="#">
-                          <i class="bi bi-arrow-left"></i>
+                          <i class="bi bi-arrow-right"></i>
                         </a>
                       </li>
                     </ul>

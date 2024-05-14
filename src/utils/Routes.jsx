@@ -30,7 +30,7 @@ const protects = {
   default: [
     {
       path: "/",
-      element: <LoginLayout />,
+      element:  <LoginLayout />,
       children: [
         { path: "/", element: <Home /> },
         { path: "/Favorites", element: <Favorites /> },

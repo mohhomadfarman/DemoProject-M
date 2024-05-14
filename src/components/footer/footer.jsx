@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function MyFooter() {
   return (
@@ -11,13 +12,13 @@ function MyFooter() {
                 <img style={{ marginBottom: "39px" }} src=" /logo.svg" alt="" />
                 <p className="mb-0">Unterkünfte</p>
                 <li>
-                  <a href="#">Top 3 Appartements am Strand in Mallorca</a>
+                  <Link to="/top-hotels">Top 3 Appartements am Strand in Mallorca</Link>
                 </li>
                 <li>
-                  <a href="#">Die Top Wellness Hotels in Mallorca</a>
+                <Link to="/top-hotels">Die Top Wellness Hotels in Mallorca</Link>
                 </li>
                 <li>
-                  <a href="#">Top 3 Appartements am Strand in Mallorca</a>
+                <Link to="/top-hotels">Top 3 Appartements am Strand in Mallorca</Link>
                 </li>
               </ul>
             </div>
@@ -25,13 +26,13 @@ function MyFooter() {
               <ul className="Footer-link">
                 <p className="mb-0">Aktivitäten</p>
                 <li>
-                  <a href="#">Top 3 Appartements am Strand in Mallorca</a>
+                <Link to="/top-hotels">Top 3 Appartements am Strand in Mallorca</Link>
                 </li>
                 <li>
-                  <a href="#">Die Top Wellness Hotels in Mallorca</a>
+                <Link to="/top-hotels">Die Top Wellness Hotels in Mallorca</Link>
                 </li>
                 <li>
-                  <a href="#">Top 3 Appartements am Strand in Mallorca</a>
+                <Link to="/top-hotels">Top 3 Appartements am Strand in Mallorca</Link>
                 </li>
               </ul>
             </div>
