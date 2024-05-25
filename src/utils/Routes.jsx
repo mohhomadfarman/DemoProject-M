@@ -9,6 +9,7 @@ import AppartmentCenter from "../components/pages/Appartment Center/AppartmentCe
 import WellssMallorcasl from "../components/pages/Appartment Center/Popular10";
 import Accommodation from "../components/pages/Appartment Center/Accommodation";
 import Participants from "../components/pages/from/Participants";
+import IBooking from "../components/pages/IBooking/IBooking";
 
 const role = getUserId() ? getUserId()?.role : null;
 const isLoggedIn = getToken();
@@ -30,7 +31,7 @@ const protects = {
   default: [
     {
       path: "/",
-      element:  <LoginLayout />,
+      element: <LoginLayout />,
       children: [
         { path: "/", element: <Home /> },
         { path: "/Favorites", element: <Favorites /> },
@@ -39,6 +40,7 @@ const protects = {
         { path: "/top-hotels", element: <WellssMallorcasl /> },
         { path: "/Accommodation", element: <Accommodation /> },
         { path: "/Participants", element: <Participants /> },
+        { path: "/IBooking", element: <IBooking /> },
 
         { path: "*", element: "No PAGE FOUNG" },
       ],
