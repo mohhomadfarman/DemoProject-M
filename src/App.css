@@ -31,6 +31,23 @@
   line-height: 110%; /* 44px */
   margin-top: 67px;
 }
+.section-title {
+  color: #550076 !important;
+  font-weight: 900 !important;
+  font-size: 30px !important;
+  line-height: 33px !important;
+  font-family: "Gazpacho" !important;
+}
+.border-new p, .border-new li {
+  font-family: Lexend;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #0F0F0F;
+  padding: 5px 0;
+}
 .location-address {
   margin-bottom: 18px;
 }

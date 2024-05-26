@@ -10,6 +10,7 @@ import WellssMallorcasl from "../components/pages/Appartment Center/Popular10";
 import Accommodation from "../components/pages/Appartment Center/Accommodation";
 import Participants from "../components/pages/from/Participants";
 import IBooking from "../components/pages/IBooking/IBooking";
+import AttDetails from "../components/pages/Attrection/AttDetails";
 
 const role = getUserId() ? getUserId()?.role : null;
 const isLoggedIn = getToken();
@@ -41,6 +42,7 @@ const protects = {
         { path: "/Accommodation", element: <Accommodation /> },
         { path: "/Participants", element: <Participants /> },
         { path: "/IBooking", element: <IBooking /> },
+        { path: "/Attrection", element: <AttDetails /> },
 
         { path: "*", element: "No PAGE FOUNG" },
       ],
