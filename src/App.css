@@ -713,15 +713,7 @@ body {
   font-family: "Gazpacho";
   src: url(/public/fonts/Gazpacho\ Heavy.ttf);
 }
-@font-face {
-  font-family: "cera pro";
-  /* src: url(../font/cera\ pro\ sv/); */
-}
 
-@font-face {
-  font-family: "Lexend", sans-serif;
-  /* src: url(../css2-1); */
-}
 
 * {
   box-sizing: border-box;

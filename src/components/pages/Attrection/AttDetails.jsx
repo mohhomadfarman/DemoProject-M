@@ -41,7 +41,9 @@ function AttDetails() {
     {isLoading ? (<>
     
    <div className=" position-fixed  bg-white w-100 d-flex justify-content-center align-items-center" style={{height:"100dvh"}}>
-   <RotatingLines
+ <div className="loader"></div>
+ 
+   {/* <RotatingLines
   visible={true}
   height="96"
   width="96"
@@ -51,7 +53,7 @@ function AttDetails() {
   ariaLabel="rotating-lines-loading"
   wrapperStyle={{}}
   wrapperClass=""
-  />
+  /> */}
     </div>
     </>) : (<>
     
