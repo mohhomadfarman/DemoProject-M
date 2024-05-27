@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Link, useParams } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -7,7 +7,24 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
+import { useDispatch, useSelector } from "react-redux";
+import { acttractionActionsingle } from "../../../redux/actions/attractions";
 function AttDetails() {
+  const id = useParams();
+  console.log(id, "dddfd");
+
+  const dispatch = useDispatch();
+  const data = useSelector(
+    (state) => state?.attractions?.BusinessListingss?.data
+  );
+  console.log(data?.attributes, "data");
+
+  useEffect(() => {
+    return () => {
+      dispatch(acttractionActionsingle(id));
+    };
+  }, []);
+
   return (
     <>
       <div className="section-1">
@@ -22,7 +39,8 @@ function AttDetails() {
                   >
                     <div className="designer-color d-flex d-md-none">
                       <a className="text-decoration-none d-block d-md-none">
-                        <img src="/Group%20116.svg" alt="" /> Zurück
+                        <img src="/Group%20116.svg" alt="" />{" "}
+                        {data?.attributes?.Title}
                       </a>
                       <img src=" /favoriten.svg" alt="" />
                     </div>
@@ -60,16 +78,20 @@ function AttDetails() {
           className="mySwiper"
         >
           {" "}
-          {Array.from({ length: 5 }, (_, i) => (
-            <SwiperSlide>
-              <img
-                style={{ objectFit: "cover", height: "600px" }}
-                src="https://demogswebtech.com/mallorca/storage/2023/11/17/img-grid-3-1700219651.jpg"
-                className="d-block img-fluid w-100"
-                alt="Slide 1"
-              />
-            </SwiperSlide>
-          ))}
+          {data?.attributes?.Gallery?.data.map((e) => {
+            return (
+              <>
+                <SwiperSlide>
+                  <img
+                    style={{ objectFit: "cover", height: "600px" }}
+                    src={e?.attributes?.url}
+                    className="d-block img-fluid w-100"
+                    alt="Slide 1"
+                  />
+                </SwiperSlide>
+              </>
+            );
+          })}
         </Swiper>
       </div>
 
@@ -238,7 +260,6 @@ function AttDetails() {
         </div>
       </section>
 
-      
       <div className="section-4">
         <div className="container">
           <div className="row align-items-center">
@@ -540,7 +561,6 @@ function AttDetails() {
         </div>
       </div>
     </>
-  
   );
 }
 export default AttDetails;

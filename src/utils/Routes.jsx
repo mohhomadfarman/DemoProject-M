@@ -11,6 +11,7 @@ import Accommodation from "../components/pages/Appartment Center/Accommodation";
 import Participants from "../components/pages/from/Participants";
 import IBooking from "../components/pages/IBooking/IBooking";
 import AttDetails from "../components/pages/Attrection/AttDetails";
+import HotelLesting from "../components/pages/Appartment Center/HotelLesting";
 
 const role = getUserId() ? getUserId()?.role : null;
 const isLoggedIn = getToken();
@@ -42,7 +43,8 @@ const protects = {
         { path: "/Accommodation", element: <Accommodation /> },
         { path: "/Participants", element: <Participants /> },
         { path: "/IBooking", element: <IBooking /> },
-        { path: "/Attrection", element: <AttDetails /> },
+        { path: "/Attrection/:id", element: <AttDetails /> },
+        { path: "/HotelLesting", element: <HotelLesting /> },
 
         { path: "*", element: "No PAGE FOUNG" },
       ],

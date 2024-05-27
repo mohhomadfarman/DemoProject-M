@@ -12,7 +12,7 @@ function IBooking() {
             <div className="container ">
               <ul className="IBooking_words  d-flex  ">
                 <li>
-                  <a>Home ></a>
+                  <a href="">Home</a>
                 </li>
                 <li>
                   <span>Become A Partner</span>
