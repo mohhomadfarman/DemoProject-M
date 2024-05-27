@@ -9,7 +9,6 @@ import "swiper/css/pagination";
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
 import { useDispatch, useSelector } from "react-redux";
 import { acttractionActionsingle } from "../../../redux/actions/attractions";
-import { RotatingLines } from "react-loader-spinner";
 function AttDetails() {
   const id = useParams();
   const navigate = useNavigate()
@@ -23,37 +22,26 @@ function AttDetails() {
   );
 
   useEffect(() => {
-    return () => {
       dispatch(acttractionActionsingle(id))
       
+
       .then((res)=>{
         if(res?.payload?.data === undefined){
           navigate("/NotFound")
         }
       })
-    };
 
     
   }, []);
+
+  
 
   return (
     <>
     {isLoading ? (<>
     
    <div className=" position-fixed  bg-white w-100 d-flex justify-content-center align-items-center" style={{height:"100dvh"}}>
- <div className="loader"></div>
- 
-   {/* <RotatingLines
-  visible={true}
-  height="96"
-  width="96"
-  color="grey"
-  strokeWidth="5"
-  animationDuration="0.75"
-  ariaLabel="rotating-lines-loading"
-  wrapperStyle={{}}
-  wrapperClass=""
-  /> */}
+    <div className="loader"></div>
     </div>
     </>) : (<>
     
