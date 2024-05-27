@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 function IBooking() {
   return (
@@ -12,7 +13,7 @@ function IBooking() {
             <div className="container ">
               <ul className="IBooking_words  d-flex  ">
                 <li>
-                  <a href="">Home</a>
+                  <Link to="/">Home</Link>
                 </li>
                 <li>
                   <span>Become A Partner</span>
@@ -101,12 +102,12 @@ function IBooking() {
                     <label className="checkbox-inline">
                       <input type="checkbox" name="agree" value="1" />
                       <span></span>I accept
-                      <a
-                        href="https://demogswebtech.com/mallorca/page/lorem-ipsum-passage"
+                      <Link
+                        to="https://demogswebtech.com/mallorca/page/lorem-ipsum-passage"
                         className="link"
                       >
                         Terms and Conditions
-                      </a>
+                      </Link>
                     </label>
                   </div>
                   <div className="gmz-message"></div>

@@ -88,9 +88,9 @@ function AttDetails() {
             </div>
             <div className="col-md-2 d-none d-md-block">
               <div>
-                <a href="#">
+                <Link to="#">
                   <img src="/favoriten.svg" alt="" />
-                </a>
+                </Link>
               </div>
             </div>
           </div>

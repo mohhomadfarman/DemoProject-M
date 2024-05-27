@@ -14,7 +14,7 @@ function NavBar() {
             <img src="/group-158.svg" alt="" />
           </Link>
 
-          {/* <a href="#" className="d-block d-lg-none">
+          {/* <Link to="#" className="d-block d-lg-none">
             <img src="/group-158.svg" />
           </a> */}
           <div className="d-flex gap-3 d-lg-none">
@@ -58,7 +58,7 @@ function NavBar() {
                 </Link>
               </li>
               <li className="nav-item d-none d-lg-block">
-              <Link to='/ShoppingCart' className="nav-link menu-top-header" href="Warenkorb.html">
+              <Link to='/ShoppingCart' className="nav-link menu-top-header" >
                   <img src="/tablershoppingcart.svg" alt="" />
                   Warenkorb
                 </Link>
@@ -68,18 +68,18 @@ function NavBar() {
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal"
               >
-                <a href="# " className="nav-link">
+                <Link to="# " className="nav-link">
                   <div className="frst-btn">Login</div>
-                </a>
+                </Link>
               </li>
               <li className="nav-item d-none d-lg-block">
-                <a href="#" className="nav-link">
+                <Link to="#" className="nav-link">
                   <div className="burger">
                     <div className="burger-child"></div>
                     <div className="burger-child"></div>
                     <div className="burger-child"></div>
                   </div>
-                </a>
+                </Link>
               </li>
             </ul>
             <div

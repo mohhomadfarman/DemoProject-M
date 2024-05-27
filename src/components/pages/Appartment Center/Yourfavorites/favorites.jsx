@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
+import { Link } from "react-router-dom";
 function Favorites() {
   return (
     <div>
@@ -12,9 +13,9 @@ function Favorites() {
           <div className="row">
             <div className="col-md-12">
               <div className="fav-section">
-                <a href="#" className="text-decoration-none d-block d-md-none">
+                <Link to="#" className="text-decoration-none d-block d-md-none">
                   <img src="img/Group%20116.svg" alt="" /> Zurück
-                </a>
+                </Link>
                 <h2>Deine Favoriten</h2>
                 <div className="fav-body d-flex gap-3 align-items-start">
                   <img src="img/ph_smiley-wink-fill.svg" alt="" />
@@ -44,7 +45,7 @@ function Favorites() {
               <div className="Add-fav-post">
                 <img src="/Plus%20vector.svg" alt="" />
                 <span>
-                  <a href="#">Neue Liste anlegen</a>
+                  <Link to="#">Neue Liste anlegen</Link>
                 </span>
               </div>
               <div className="post-heading d-flex justify-content-between">
@@ -52,14 +53,14 @@ function Favorites() {
                 <div className="edit-ad-post">
                   <span>4 Favoriten</span>
                   <span>
-                    <a href="#">
+                    <Link to="#">
                       <img src="/raphael_pensil.svg" alt="" />
-                    </a>
+                    </Link>
                   </span>
                   <span>
-                    <a href="#">
+                    <Link to="#">
                       <img src="/Vectoaar.svg" alt="" />
-                    </a>
+                    </Link>
                   </span>
                 </div>
               </div>
@@ -141,12 +142,12 @@ function Favorites() {
                       />
                       <div className="card-body">
                         <h5 className="card-title body mb-0">
-                          <a
-                            href="Details.html"
+                          <Link
+                            to="Details.html"
                             className="text-decoration-none"
                           >
                             Appartment Palma Center
-                          </a>
+                          </Link>
                         </h5>
                         <p className="card-text mb-0">
                           2 Betten / 1 Schlafzimmer
@@ -172,7 +173,7 @@ function Favorites() {
               <div className="Add-fav-post">
                 <img src="/Plus%20vector.svg" alt="" />
                 <span>
-                  <a href="#">Neue Liste anlegen</a>
+                  <Link to="#">Neue Liste anlegen</Link>
                 </span>
               </div>
               <div className="post-heading d-flex justify-content-between">
@@ -180,14 +181,14 @@ function Favorites() {
                 <div className="edit-ad-post">
                   <span>4 Favoriten</span>
                   <span>
-                    <a href="#">
+                    <Link to="#">
                       <img src="/raphael_pensil.svg" alt="" />
-                    </a>
+                    </Link>
                   </span>
                   <span>
-                    <a href="#">
+                    <Link to="#">
                       <img src="/Vectoaar.svg" alt="" />
-                    </a>
+                    </Link>
                   </span>
                 </div>
               </div>
@@ -269,12 +270,12 @@ function Favorites() {
                       />
                       <div className="card-body">
                         <h5 className="card-title body mb-0">
-                          <a
-                            href="Details.html"
+                          <Link
+                            to="Details.html"
                             className="text-decoration-none"
                           >
                             Appartment Palma Center
-                          </a>
+                          </Link>
                         </h5>
                         <p className="card-text mb-0">
                           2 Betten / 1 Schlafzimmer
@@ -300,7 +301,7 @@ function Favorites() {
               <div className="Add-fav-post">
                 <img src="/Plus%20vector.svg" alt="" />
                 <span>
-                  <a href="#">Neue Liste anlegen</a>
+                  <Link to="#">Neue Liste anlegen</Link>
                 </span>
               </div>
               <div className="post-heading d-flex justify-content-between">
@@ -308,14 +309,14 @@ function Favorites() {
                 <div className="edit-ad-post">
                   <span>4 Favoriten</span>
                   <span>
-                    <a href="#">
+                    <Link to="#">
                       <img src="/raphael_pensil.svg" alt="" />
-                    </a>
+                    </Link>
                   </span>
                   <span>
-                    <a href="#">
+                    <Link to="#">
                       <img src="/Vectoaar.svg" alt="" />
-                    </a>
+                    </Link>
                   </span>
                 </div>
               </div>
@@ -397,12 +398,12 @@ function Favorites() {
                       />
                       <div className="card-body">
                         <h5 className="card-title body mb-0">
-                          <a
-                            href="Details.html"
+                          <Link
+                            to="Details.html"
                             className="text-decoration-none"
                           >
                             Appartment Palma Center
-                          </a>
+                          </Link>
                         </h5>
                         <p className="card-text mb-0">
                           2 Betten / 1 Schlafzimmer

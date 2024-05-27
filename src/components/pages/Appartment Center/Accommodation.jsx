@@ -1,5 +1,6 @@
 import React from "react";
 import Slider from "../../../atoms/slider/slider";
+import { Link } from "react-router-dom";
 function Accommodation() {
   return (
     <div>
@@ -87,14 +88,14 @@ function Accommodation() {
               </div>
             </div>
             <div className="col-sm-2 col-md-1 col-2">
-              <a
-                href="#"
+              <Link
+                to="#"
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal3"
                 className="d-flex align-items-center justify-content-center h-100"
               >
                 <img src="/aktive.svg" alt="" />
-              </a>
+              </Link>
 
               <div
                 className="modal fade"
@@ -259,34 +260,34 @@ function Accommodation() {
                   <nav aria-label="Page navigation example w-100 Pagination-points">
                     <ul class="pagination">
                       <li class="page-item border-0">
-                        <a class="page-link border-0" href="#">
+                        <Link class="page-link border-0" to="#">
                           <i class="bi bi-arrow-left"></i>
-                        </a>
+                        </Link>
                       </li>
                       <li class="page-item border-0">
-                        <a class="page-link border-0" href="#">
+                        <Link class="page-link border-0" to="#">
                           1
-                        </a>
+                        </Link>
                       </li>
                       <li class="page-item border-0">
-                        <a class="page-link border-0" href="#">
+                        <Link class="page-link border-0" to="#">
                           2
-                        </a>
+                        </Link>
                       </li>
                       <li class="page-item border-0">
-                        <a class="page-link border-0" href="#">
+                        <Link class="page-link border-0" to="#">
                           3
-                        </a>
+                        </Link>
                       </li>
                       <li class="page-item border-0">
-                        <a class="page-link border-0" href="#">
+                        <Link class="page-link border-0" to="#">
                           3
-                        </a>
+                        </Link>
                       </li>
                       <li class="page-item border-0">
-                        <a class="page-link border-0" href="#">
+                        <Link class="page-link border-0" to="#">
                           <i class="bi bi-arrow-right"></i>
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </nav>

@@ -6,6 +6,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
+import { Link } from "react-router-dom";
 
 function AppartmentCenter() {
   const faqItems = [
@@ -44,9 +45,9 @@ function AppartmentCenter() {
               <Swiper slidesPerView={1} pagination={{ clickable: true }}>
                 <SwiperSlide>
                   <div className="designer-color d-flex d-md-none">
-                    <a className="text-decoration-none d-block d-md-none">
+                    <Link className="text-decoration-none d-block d-md-none">
                       <img src="/Group%20116.svg" alt="" /> Zurück
-                    </a>
+                    </Link>
                     <img src=" /favoriten.svg" alt="" />
                   </div>
                   <div className="Appartment-palma">
@@ -65,9 +66,9 @@ function AppartmentCenter() {
             </div>
             <div className="col-md-2 d-none d-md-block">
               <div>
-                <a href="#">
+                <Link to="#">
                   <img src="/favoriten.svg" alt="" />
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -138,7 +139,7 @@ function AppartmentCenter() {
             </div>
             <div className="col-md-4 order-1 order-md-2">
               <div className="book-now">
-                <a href="">Jetzt buchen</a>
+                <Link to="">Jetzt buchen</Link>
               </div>
             </div>
             <div className="col-md-10 order-3">
@@ -252,9 +253,9 @@ function AppartmentCenter() {
                   </div>
                 </div>
                 <div className="reserve-room">
-                  <a href="#" className="btn btn-primary">
+                  <Link to="#" className="btn btn-primary">
                     <p>Reservieren</p>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -329,9 +330,9 @@ function AppartmentCenter() {
                   </div>
                 </div>
                 <div className="reserve-room">
-                  <a href="#" className="btn btn-primary">
+                  <Link to="#" className="btn btn-primary">
                     <p>Reservieren</p>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -406,9 +407,9 @@ function AppartmentCenter() {
                   </div>
                 </div>
                 <div className="reserve-room">
-                  <a href="#" className="btn btn-primary">
+                  <Link to="#" className="btn btn-primary">
                     <p>Reservieren</p>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -855,12 +856,12 @@ function AppartmentCenter() {
                       />
                       <div className="card-body">
                         <h5 className="card-title body mb-0">
-                          <a
-                            href="Details.html"
+                          <Link
+                            to="Details.html"
                             className="text-decoration-none"
                           >
                             Appartment Palma Center
-                          </a>
+                          </Link>
                         </h5>
                         <p className="card-text mb-0">
                           2 Betten / 1 Schlafzimmer

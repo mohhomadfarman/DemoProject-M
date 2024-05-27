@@ -101,13 +101,13 @@ function Home() {
                 className="w-100 h-100 full-sm-img justify-content-start"
                 style={{ paddingLeft: "0px" }}
               >
-                <a href="https://demogswebtech.com/mallorca/hotel">
+                <Link to="https://demogswebtech.com/mallorca/hotel">
                   <h2>
                     The top <br />
                     wellness hotels <br />
                     in Mallorca
                   </h2>
-                </a>
+                </Link>
               </div>
             </div>
             <div className="col-md-6 d-flex pl-0">
@@ -127,9 +127,9 @@ function Home() {
         class="d-flex align-items-center full-md-img new_oder list-apartments d-space-none-xxl d-lg-none d-block"
         style={{ backgroundImage: "url(/highlights.jpg)", height: "242px" }}
       >
-        <a
+        <Link
           class="text-decoration-none w-100"
-          href="https://demogswebtech.com/mallorca/apartment"
+          to="https://demogswebtech.com/mallorca/apartment"
         >
           <div class="container">
             <h2 className="fs-24">
@@ -138,15 +138,15 @@ function Home() {
               in Mallorca
             </h2>
           </div>
-        </a>
+        </Link>
       </section>
       <section
         class=" d-flex align-items-center full-md-img new_oder list-apartments d-space-none-xxl d-lg-none d-block"
         style={{ backgroundImage: "url(/highlights.png)", height: "242px" }}
       >
-        <a
+        <Link
           class="text-decoration-none w-100"
-          href="https://demogswebtech.com/mallorca/apartment"
+          to="https://demogswebtech.com/mallorca/apartment"
         >
           <div class="container">
             <h2 className="fs-24">
@@ -155,7 +155,7 @@ function Home() {
               in Mallorca
             </h2>
           </div>
-        </a>
+        </Link>
       </section>
     </div>
   );

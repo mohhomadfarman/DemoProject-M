@@ -39,41 +39,41 @@ function MyFooter() {
             <div className="col-lg-2 col-md-2 col-12">
               <ul className="Footer-link">
                 <li>
-                  <a href="#" className="text-decoration-none">
+                  <Link to="#" className="text-decoration-none">
                     Partner werden
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-decoration-none">
+                  <Link to="#" className="text-decoration-none">
                     Hilfe
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-decoration-none">
+                  <Link to="#" className="text-decoration-none">
                     Impressum
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-decoration-none">
+                  <Link to="#" className="text-decoration-none">
                     Datenschutz
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
             <div className="col-md-2">
               <div className="d-flex flex-row gap-3">
-                <a href="#">
+                <Link to="#">
                   <img src=" /facebook.svg" alt="" />
-                </a>
-                <a href="#">
+                </Link>
+                <Link to="#">
                   <img src=" /whatsapp.svg" alt="" />
-                </a>
-                <a href="#">
+                </Link>
+                <Link to="#">
                   <img src=" /facebookmessenger.svg" alt="" />
-                </a>
-                <a href="#">
+                </Link>
+                <Link to="#">
                   <img src=" /instagram.svg" alt="" />
-                </a>
+                </Link>
               </div>
             </div>
           </div>

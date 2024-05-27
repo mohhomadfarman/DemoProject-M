@@ -6,6 +6,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
+import { Link } from "react-router-dom";
 function WellssMallorcasl() {
   return (
     <div>
@@ -872,7 +873,7 @@ function WellssMallorcasl() {
                     src="/unsplash_Jyg7xHRmXiU.jpg"
                     alt=""
                   />
-                  <a href="#" className="d-block">
+                  <a to="#" className="d-block">
                     Spa Hotel Adrana am Strand entdecken
                   </a>
                   <p>
@@ -904,9 +905,9 @@ function WellssMallorcasl() {
                     src="/unsplash_1_kitfaK5Jo.jpg"
                     alt=""
                   />
-                  <a href="#" className="d-block">
+                  <Link to="#" className="d-block">
                     Spa Hotel Adrana am Strand entdecken
-                  </a>
+                  </Link>
                   <p>
                     Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry. Lorem Ipsum has been the industry's

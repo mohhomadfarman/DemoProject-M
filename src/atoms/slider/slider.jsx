@@ -3,7 +3,7 @@ import React from "react";
 import { SwiperSlide, Swiper } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 function Slider(props) {
   const navigate = useNavigate();
 
@@ -85,9 +85,9 @@ function Slider(props) {
             <img src="/favoriten.svg" className="fav-icon-img" alt="..." />
             <div className="card-body">
               <h5 className="card-title body mb-0">
-                <a href="Details.html" className="text-decoration-none">
+                <Link to="Details.html" className="text-decoration-none">
                   {props?.title}
-                </a>
+                </Link>
               </h5>
               <p className="card-text mb-0">2 Betten / 1 Schlafzimmer</p>
               <p className="card-text mb-0">

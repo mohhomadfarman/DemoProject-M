@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function ShoppingCart() {
   return (
@@ -10,7 +11,7 @@ function ShoppingCart() {
               <div className="col-md-12">
                 <div className="cart-title">
                   <a
-                    href="#"
+                    to="#"
                     className="text-decoration-none d-block d-md-none"
                   >
                     <img src="/Group%20116.svg" alt="" /> Zurück
@@ -26,7 +27,7 @@ function ShoppingCart() {
                         <h5 className="m-0">
                           Kathedralen von Palma de Mallorca
                         </h5>
-                        <a href="#">
+                        <a to="#">
                           <img src="/Vectoaar.svg" alt="" />
                         </a>
                       </div>
@@ -47,7 +48,7 @@ function ShoppingCart() {
                           />
                           <span>2 Erwachsene</span>
                         </div>
-                        <a href="#">
+                        <a to="#">
                           <img width="28px" src="raphael_pensil.svg" alt="" />
                         </a>
                       </div>
@@ -56,7 +57,7 @@ function ShoppingCart() {
                           <img src="/bxs_time.svg" alt="" />
                           <span>Dauer: 1/2 Tag</span>
                         </div>
-                        <a href="#">
+                        <a to="#">
                           <img width="28px" src="/raphael_pensil.svg" alt="" />
                         </a>
                       </div>
@@ -65,7 +66,7 @@ function ShoppingCart() {
                           <img src="/clarity_talk-bubbles-solid.svg" alt="" />
                           <span>Deutsch</span>
                         </div>
-                        <a href="#">
+                        <a to="#">
                           <img width="28px" src="/raphael_pensil.svg" alt="" />
                         </a>
                       </div>
@@ -74,7 +75,7 @@ function ShoppingCart() {
                           <img src="/uis_calender.svg" alt="" />
                           <span>18 Jun -So 24</span>
                         </div>
-                        <a href="#">
+                        <a to="#">
                           <img width="28px" src="raphael_pensil.svg" alt="" />
                         </a>
                       </div>
@@ -99,9 +100,9 @@ function ShoppingCart() {
                         <h5 className="m-0">
                           Kathedralen von Palma de Mallorca
                         </h5>
-                        <a href="#">
+                        <Link to="#">
                           <img src="Vectoaar.svg" alt="" />
-                        </a>
+                        </Link>
                       </div>
                     </div>
                     <div className="col-md-5 mb-3 col-4 mt-0">
@@ -117,36 +118,36 @@ function ShoppingCart() {
                           <img src="icon-park-solid_people-bottom.svg" alt="" />
                           <span>2 Erwachsene</span>
                         </div>
-                        <a href="#">
+                        <Link to="#">
                           <img width="28px" src="raphael_pensil.svg" alt="" />
-                        </a>
+                        </Link>
                       </div>
                       <div className="cart-item-details d-flex justify-content-between align-items-center">
                         <div className="items d-flex gap-3">
                           <img src="bxs_time.svg" alt="" />
                           <span>Dauer: 1/2 Tag</span>
                         </div>
-                        <a href="#">
+                        <Link to="#">
                           <img width="28px" src="raphael_pensil.svg" alt="" />
-                        </a>
+                        </Link>
                       </div>
                       <div className="cart-item-details d-flex justify-content-between align-items-center">
                         <div className="items d-flex gap-3">
                           <img src="clarity_talk-bubbles-solid.svg" alt="" />
                           <span>Deutsch</span>
                         </div>
-                        <a href="#">
+                        <Link to="#">
                           <img width="28px" src="raphael_pensil.svg" alt="" />
-                        </a>
+                        </Link>
                       </div>
                       <div className="cart-item-details d-flex justify-content-between align-items-center">
                         <div className="items d-flex gap-3">
                           <img src="uis_calender.svg" alt="" />
                           <span>18 Jun -So 24</span>
                         </div>
-                        <a href="#">
+                        <Link to="#">
                           <img width="28px" src="raphael_pensil.svg" alt="" />
-                        </a>
+                        </Link>
                       </div>
                       <div className=" d-block d-md-none cart-item-details d-flex justify-content-between align-items-center">
                         <div className="items d-flex gap-3">
@@ -168,7 +169,7 @@ function ShoppingCart() {
                   <label>2 Artikel insgesamt:</label>
                   <h3 className="d-none d-md-none">58,00 EUR</h3>
                   <a
-                    href="#"
+                    to="#"
                     className="sec-btn width d-flex justify-content-center align-items-center"
                   >
                     Jetzt buchen
