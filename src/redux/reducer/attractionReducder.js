@@ -34,7 +34,7 @@ const attractionsListing = createSlice({
     });
     bulider.addCase(acttractionActionsingle.fulfilled, (state, action) => {
       state.isLoading = false;
-      state.BusinessListingss = action?.payload;
+      state.attractionsListing = action?.payload;
       state.error = "";
     });
     bulider.addCase(acttractionActionsingle.rejected, (state, action) => {

@@ -2,17 +2,18 @@ import React, { useEffect } from "react";
 import Slider from "../../../atoms/slider/slider";
 import { useDispatch, useSelector } from "react-redux";
 import { acttractionAction } from "../../../redux/actions/attractions";
+import { Link } from "react-router-dom";
 function HotelLesting() {
   const dispatch = useDispatch();
   const data = useSelector(
     (state) => state?.attractions?.BusinessListingss?.data
   );
-  console.log(data, "dffd");
+  const dataNumber = useSelector(
+    (state) => state?.attractions?.BusinessListingss?.meta
+  );
 
   useEffect(() => {
-    return () => {
       dispatch(acttractionAction());
-    };
   }, []);
   return (
     <div>
@@ -254,35 +255,109 @@ function HotelLesting() {
         <div class="container position-relative">
           <div class="row flex-column-reverse  flex-md-row ">
             <div class="col-md-7 ">
-              <h2 class="mein-headign-1">Mallorca Unterkünfte</h2>
+              <h2 class="mein-headign-1">Your Mallorca Attractions</h2>
               <p class="d-block d-md-none sub-head-1">
-                Suchergebnisse: 100 Appartments
+                Suchergebnisse: {dataNumber?.pagination?.total} tours
               </p>
               <div class="row">
-                {data && data
-                  ? data.map((item) => {
-                      console.log(item?.id, "imh");
+                {data?.map((item) => {
                       return (
                         <>
-                          <div class="col-lg-12 mb-4">
-                            {/* <!-- Set up your HTML --> */}
+                          <div key={item?.id} class="col-lg-6 mb-4">
+                            <div className="card border-0 rounded-0 w-100 fav-icon">
+                              {/* Set up your HTML */}
+                              <div
+                                id={`carouselExampleAutoplaying`}
+                                className="carousel slide"
+                                data-bs-ride="carousel"
+                              >
+                                <div className="carousel-indicators">
+                                  <button
+                                    type="button"
+                                    data-bs-target={`#carouselExampleIndicators `}
+                                    data-bs-slide-to="0"
+                                    className="active"
+                                    aria-current="true"
+                                    aria-label="Slide 1"
+                                  ></button>
+                                  <button
+                                    type="button"
+                                    data-bs-target={`#carouselExampleIndicators`}
+                                    data-bs-slide-to="1"
+                                    aria-label="Slide 2"
+                                  ></button>
+                                  <button
+                                    type="button"
+                                    data-bs-target={`#carouselExampleIndicators`}
+                                    data-bs-slide-to="2"
+                                    aria-label="Slide 3"
+                                  ></button>
+                                </div>
+                                <div className="carousel-inner">
+                                  <div className="carousel-item active">
+                                    <img
+                                      style={{
+                                        objectFit: "cover",
+                                        height: "200px",
+                                      }}
+                                      src={
+                                        item?.attributes?.Featured_Image?.data
+                                          ?.attributes?.url
+                                      }
+                                      className="d-block w-100 card-img-top rounded-0"
+                                      alt="..."
+                                    />
+                                  </div>
+                                  {item?.attributes?.Gallery?.data.map((e) => {
+                                    <div className="carousel-item">
+                                      <img
+                                        style={{
+                                          objectFit: "cover",
+                                          height: "200px",
+                                        }}
+                                        src={e?.attributes?.url}
+                                        className="d-block w-100 card-img-top rounded-0"
+                                        alt="..."
+                                      />
+                                    </div>;
+                                  })}
+                                </div>
+                              </div>
+                              <img
+                                src="/favoriten.svg"
+                                className="fav-icon-img"
+                                alt="..."
+                              />
+                              <div className="card-body">
+                                <h5 className="card-title body mb-0">
+                                  <Link
+                                    to={`${item?.id}`}
+                                    className="text-decoration-none"
+                                  >
+                                    {item?.attributes?.Title}
+                                  </Link>
+                                </h5>
+                                <p className="card-text mb-0">
+                                  2 Betten / 1 Schlafzimmer
+                                </p>
+                                <p className="card-text mb-0">
+                                  <b>4,8</b> Google Bewertung
+                                </p>
+                                <p className="card-text price mb-0">
+                                  <b>290 € </b>/ Nacht
+                                </p>
+                                <p className="card-text small mb-0">
+                                  Gesamtpreis:{item?.attributes?.Base_Price}€
+                                </p>
+                              </div>
+                            </div>
 
-                            <Slider
-                              slidesPerView={2}
-                              title={item?.attributes?.Title}
-                              price={item?.attributes?.Base_Price}
-                              description={item?.attributes?.Short_Description}
-                              id={item?.id}
-                              image={
-                                item?.attributes?.Featured_Image?.data
-                                  ?.attributes?.url
-                              }
-                            />
+                            
                           </div>
                         </>
                       );
                     })
-                  : ""}
+                 }
 
                 {/* <div class="col-lg-12 mb-4">
 
@@ -337,7 +412,7 @@ function HotelLesting() {
             </div>
             {/* map */}
             <div class="col-md-5">
-              <h2 class="d-driver">Suchergebnisse: 100 Hotels</h2>
+              <h2 class="d-driver">Search Results: {dataNumber?.pagination?.total} Tours</h2>
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13728.259644989432!2d76.8224!3d30.6603006!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390feb44dcadeca1%3A0x7b7f65a69081f6e8!2sGS%20Web%20Technologies%3A%20Website%2C%20Mobile%20App%20Development%2C%20Graphic%20Designing%20%26%20Digital%20Marketing%20Company%20in%20Zirakpur%2C%20India!5e0!3m2!1sen!2sin!4v1698444804230!5m2!1sen!2sin"
                 width="100%"

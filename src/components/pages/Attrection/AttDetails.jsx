@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -9,24 +9,52 @@ import "swiper/css/pagination";
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
 import { useDispatch, useSelector } from "react-redux";
 import { acttractionActionsingle } from "../../../redux/actions/attractions";
+import { RotatingLines } from "react-loader-spinner";
 function AttDetails() {
   const id = useParams();
-  console.log(id, "dddfd");
+  const navigate = useNavigate()
 
   const dispatch = useDispatch();
   const data = useSelector(
-    (state) => state?.attractions?.BusinessListingss?.data
+    (state) => state?.attractions?.attractionsListing?.data
   );
-  console.log(data?.attributes, "data");
+  const isLoading = useSelector(
+    (state) => state?.attractions?.isLoading
+  );
 
   useEffect(() => {
     return () => {
-      dispatch(acttractionActionsingle(id));
+      dispatch(acttractionActionsingle(id))
+      
+      .then((res)=>{
+        if(res?.payload?.data === undefined){
+          navigate("/NotFound")
+        }
+      })
     };
+
+    
   }, []);
 
   return (
     <>
+    {isLoading ? (<>
+    
+   <div className=" position-fixed  bg-white w-100 d-flex justify-content-center align-items-center" style={{height:"100dvh"}}>
+   <RotatingLines
+  visible={true}
+  height="96"
+  width="96"
+  color="grey"
+  strokeWidth="5"
+  animationDuration="0.75"
+  ariaLabel="rotating-lines-loading"
+  wrapperStyle={{}}
+  wrapperClass=""
+  />
+    </div>
+    </>) : (<>
+    
       <div className="section-1">
         <div className="container">
           <div className="row align-items-center">
@@ -45,10 +73,10 @@ function AttDetails() {
                       <img src=" /favoriten.svg" alt="" />
                     </div>
                     <div className="Appartment-palma">
-                      <h1>Alcúdia</h1>
+                      <h1>{data?.attributes?.Title}</h1>
                     </div>
                     <div className="location-address">
-                      <span>Sightseeing Features</span>
+                      <span>{data?.attributes?.Select_Category}</span>
 
                       <span>Google Bewertung 4,8</span>
                     </div>
@@ -100,21 +128,12 @@ function AttDetails() {
           <div className="row">
             <div className="col-md-8">
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum. Bed
+              {data?.attributes?.Content}
               </p>
             </div>
             <div className="col-md-4">
               <p className="price">
-                <span>3000.00 EUR</span> pro Person
+                <span>{data?.attributes?.Base_Price} EUR</span> pro Person
               </p>
               <div className="book-now">
                 <Link to={""}> Send Enquiry</Link>
@@ -560,6 +579,8 @@ function AttDetails() {
           </div>
         </div>
       </div>
+    </>) }
+      
     </>
   );
 }

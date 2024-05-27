@@ -37,10 +37,10 @@ function Home() {
                 className=" tabs-mein"
               >
                 <Tab eventKey="Aktivitäten" title="Aktivitäten">
-                  <Search />
+                  <Search name="hotels" />
                 </Tab>
                 <Tab eventKey="Unterkünfte" title="Unterkünfte">
-                  <Search />
+                  <Search name="attractions" />
                 </Tab>
               </Tabs>
             </div>
