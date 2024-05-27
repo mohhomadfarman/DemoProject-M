@@ -104,3 +104,26 @@ code {
   border-top-left-radius: 0  !important;
   border-bottom-left-radius: 0  !important;
 }
+
+p span {
+  font-family: Lexend;
+  font-size: 27.32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  color: #550076;
+}
+p  {
+  font-family: Lexend;
+  font-size: 20.32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  color: #550076;
+}
+.border-new {
+  border: 3px solid #550076;
+  border-radius: 5px;
+  padding: 35px !important;
+}
+

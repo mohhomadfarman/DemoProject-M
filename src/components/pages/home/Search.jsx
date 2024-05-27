@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 
-function Search() {
+function Search(props) {
     const [value, setValue] = useState(0);
 
     const handleRangeChange = (event) => {
@@ -63,7 +63,7 @@ function Search() {
     <div className="col-lg-2 col-md-3">
       <Link
         className="sec-btn text-decoration-none"
-        to="/Accommodation"
+        to={props?.name === "hotels" ? `/hotels` : "/attractions"}
       >
         Jetzt finden
       </Link>

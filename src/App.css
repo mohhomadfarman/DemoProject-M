@@ -31,6 +31,23 @@
   line-height: 110%; /* 44px */
   margin-top: 67px;
 }
+.section-title {
+  color: #550076 !important;
+  font-weight: 900 !important;
+  font-size: 30px !important;
+  line-height: 33px !important;
+  font-family: "Gazpacho" !important;
+}
+.border-new p, .border-new li {
+  font-family: Lexend;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #0F0F0F;
+  padding: 5px 0;
+}
 .location-address {
   margin-bottom: 18px;
 }
@@ -1019,10 +1036,10 @@ header {
   justify-content: center;
   align-items: center;
 }
-.full-sm-img a{
+.full-sm-img a {
   text-decoration: none;
 }
-.fs-24{
+.fs-24 {
   font-size: 25.7px !important;
 }
 .full-sm-img h2 {
@@ -1031,7 +1048,6 @@ header {
   font-size: 50.922px;
   font-style: normal;
   font-weight: 900;
-  
 }
 .Footer-link {
   display: flex;
@@ -1080,11 +1096,10 @@ header {
   white-space: nowrap;
   overflow: hidden;
 }
-.Round-input-form.dark{
+.Round-input-form.dark {
   background: var(--mallorca-gray, #ededed);
 }
 .Round-input-form input {
- 
   color: var(--mallorca-dark, #000);
   font-family: "Lexend", sans-serif;
   font-size: 13.385px;
@@ -1918,4 +1933,156 @@ white-space: nowrap; */
 
 .custom-modal {
   border: none;
+}
+/*  */
+
+.backgorund_IBooking_head {
+  background-color: #e9ecef;
+  padding-top: 10px;
+}
+.IBooking_words li {
+  list-style-type: none;
+  font-size: 12px;
+}
+
+.partner_banner {
+  background: #eee url("/public/img/become-a-partner.jpg") center center
+    no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 700px;
+}
+.become-form {
+  background: #fff;
+  border-radius: 5px;
+  padding: 35px 30px;
+  position: relative;
+  overflow: hidden;
+}
+.form-group {
+  color: #a98c84;
+  font-size: 13px;
+  padding-top: 20px;
+}
+
+.partner-form__right {
+  padding-left: 0;
+  margin-bottom: 40px;
+  top: 0;
+  transform: none;
+}
+.become-intro {
+  padding-left: 100px;
+  position: relative;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  color: #fff;
+}
+
+.become-intro h3 {
+  font-size: 38px;
+  margin-bottom: 20px;
+}
+
+.become-intro p {
+  margin-bottom: 0;
+  font-size: 18px;
+}
+.checkbox-inline {
+  padding-right: 20px;
+  line-height: 18px;
+  margin-left: 10px;
+  position: relative;
+  cursor: pointer;
+}
+.checkbox-inline .link {
+  color: var(--primary);
+}
+
+.icon-box {
+  padding: 80px 0;
+  background: #f9f9f9;
+}
+section.icon-box .title,
+.icon-box .title {
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+section.icon-box .item,
+.icon-box .item {
+  padding: 0 30px;
+  text-align: center;
+}
+section.icon-box .item .number,
+.icon-box .item .number {
+  width: 40px;
+  height: 40px;
+  background-color: #540075;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 24px;
+  color: #fff;
+  margin: auto;
+  margin-bottom: 15px;
+  line-height: 38px;
+  text-align: center;
+}
+section.icon-box .item .main-text,
+.page.contact-us section.icon-box .item .main-text {
+  font-size: 19px;
+  margin-bottom: 10px;
+}
+section.icon-box .item .sub-text,
+.page.contact-us section.icon-box .item .sub-text {
+  margin-bottom: 0;
+}
+
+/*  */
+
+section.why-be-partner,
+.page.contact-us section.why-be-partner {
+  padding: 80px 0;
+}
+section.why-be-partner .title,
+.page.contact-us section.why-be-partner .title {
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 80px;
+}
+section.why-be-partner .item,
+.page.contact-us section.why-be-partner .item {
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+}
+section.why-be-partner .item .left,
+.page.contact-us section.why-be-partner .item .left {
+  width: 50%;
+}
+section.why-be-partner .item .right,
+.page.contact-us section.why-be-partner .item .right {
+  width: 50%;
+  padding-left: 50px;
+}
+section.why-be-partner .item .main-text,
+.page.contact-us section.why-be-partner .item .main-text {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+section.why-be-partner .item .sub-text,
+.page.contact-us section.why-be-partner .item .sub-text {
+  margin-bottom: 0;
+  font-size: 16px;
+}
+section.why-be-partner .item:nth-child(2n + 1) .left,
+.page.contact-us section.why-be-partner .item:nth-child(2n + 1) .left {
+  order: 2;
+}
+section.why-be-partner .item:nth-child(2n + 1) .right,
+.page.contact-us section.why-be-partner .item:nth-child(2n + 1) .right {
+  padding-left: 0;
+  padding-right: 50px;
+  order: 1;
 }

@@ -772,15 +772,15 @@ function AppartmentCenter() {
 
       {/*  */}
 
-      <section class="pb-0">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-md-5">
-              <div class="section-2-body top10">
+      <section className="pb-0">
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-md-5">
+              <div className="section-2-body top10">
                 <h2>Beliebte Unterkünfte in Palma Center</h2>
               </div>
             </div>
-            <div class="col-md-7">
+            <div className="col-md-7">
               <Swiper
                 slidesPerView={2}
                 spaceBetween={30}

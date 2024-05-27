@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -9,7 +9,9 @@ import Search from "./Search";
 import Section_2 from "./Section_2";
 import { Link } from "react-router-dom";
 
+
 function Home() {
+ 
   return (
     <div>
       <section className="hero-banner">
@@ -35,10 +37,10 @@ function Home() {
                 className=" tabs-mein"
               >
                 <Tab eventKey="Aktivitäten" title="Aktivitäten">
-                  <Search />
+                  <Search name="hotels" />
                 </Tab>
                 <Tab eventKey="Unterkünfte" title="Unterkünfte">
-                  <Search />
+                  <Search name="attractions" />
                 </Tab>
               </Tabs>
             </div>
@@ -48,7 +50,10 @@ function Home() {
 
       {/* <!-- Section 2 --> */}
 
-  <Section_2 title="Beliebte Unterkünfte in Palma Center" desc="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."/>
+      <Section_2
+        title="Beliebte Unterkünfte in Palma Center"
+        desc="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
+      />
       {/* section 3 */}
       <section
         className="full-md-img"
@@ -116,24 +121,42 @@ function Home() {
             </div>
           </div>
         </div>
-
-
       </section>
 
-      <section class="d-flex align-items-center full-md-img new_oder list-apartments d-space-none-xxl d-lg-none d-block" style={{backgroundImage: "url(/highlights.jpg)", height:"242px"}}>
-            <a class="text-decoration-none w-100" href="https://demogswebtech.com/mallorca/apartment">
-                <div class="container">
-                <h2 className="fs-24">The top <br/>wellness hotels <br/>in Mallorca</h2>
-                </div>
-            </a>
-    </section>
-    <section class=" d-flex align-items-center full-md-img new_oder list-apartments d-space-none-xxl d-lg-none d-block" style={{backgroundImage: "url(/highlights.png)", height:"242px"}}>
-            <a class="text-decoration-none w-100" href="https://demogswebtech.com/mallorca/apartment">
-                <div class="container">
-                  <h2 className="fs-24">The top <br/>wellness hotels <br/>in Mallorca</h2>
-                </div>
-            </a>
-    </section>
+      <section
+        class="d-flex align-items-center full-md-img new_oder list-apartments d-space-none-xxl d-lg-none d-block"
+        style={{ backgroundImage: "url(/highlights.jpg)", height: "242px" }}
+      >
+        <a
+          class="text-decoration-none w-100"
+          href="https://demogswebtech.com/mallorca/apartment"
+        >
+          <div class="container">
+            <h2 className="fs-24">
+              The top <br />
+              wellness hotels <br />
+              in Mallorca
+            </h2>
+          </div>
+        </a>
+      </section>
+      <section
+        class=" d-flex align-items-center full-md-img new_oder list-apartments d-space-none-xxl d-lg-none d-block"
+        style={{ backgroundImage: "url(/highlights.png)", height: "242px" }}
+      >
+        <a
+          class="text-decoration-none w-100"
+          href="https://demogswebtech.com/mallorca/apartment"
+        >
+          <div class="container">
+            <h2 className="fs-24">
+              The top <br />
+              wellness hotels <br />
+              in Mallorca
+            </h2>
+          </div>
+        </a>
+      </section>
     </div>
   );
 }
