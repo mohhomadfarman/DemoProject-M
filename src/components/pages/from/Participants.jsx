@@ -3,29 +3,30 @@ import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 
-function Participants() {
-  const [show, setShow] = useState(false);
+function Participants(props) {
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
 
   return (
     <div>
-      <Button variant="primary" onClick={handleShow}>
+      {/* <Button variant="primary" onClick={handleShow}>
         Launch demo modal
-      </Button>
+      </Button> */}
 
-      <Modal show={show} onHide={handleClose} className="custom-modal">
-        <Modal.Header closeButton className="custom-modal-header">
-          <div className="Participiants-heading">
+      <Modal show={props?.show} onHide={()=>props?.handleClose()} className="custom-modal">
+        <Modal.Header  className="custom-modal-header justify-content-end">
+        <button onClick={()=>props?.handleClose()} type="button" class="close custom-close bg-white border-0 " data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <img src="https://demogswebtech.com/mallorca/public/images/custom-img/close.svg" alt=""/></span>
+        </button>
+        </Modal.Header>
+        <Modal.Body>
+        <div className="Participiants-heading">
             <h2 className="modal-title">
               Select Participiants
               <br />
               And Dates
             </h2>
           </div>
-        </Modal.Header>
-        <Modal.Body>
           <div className="tab-content " id="pills-tabContent">
             <div
               className="tab-pane fade show active"

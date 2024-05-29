@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -9,9 +9,14 @@ import "swiper/css/pagination";
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
 import { useDispatch, useSelector } from "react-redux";
 import { acttractionActionsingle } from "../../../redux/actions/attractions";
+import Participants from "../from/Participants";
 function AttDetails() {
   const id = useParams();
   const navigate = useNavigate()
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   const dispatch = useDispatch();
   const data = useSelector(
@@ -125,7 +130,7 @@ function AttDetails() {
               <p className="price">
                 <span>{data?.attributes?.Base_Price} EUR</span> pro Person
               </p>
-              <div className="book-now">
+              <div onClick={handleShow} className="book-now">
                 <Link to={""}> Send Enquiry</Link>
               </div>
             </div>
@@ -569,6 +574,7 @@ function AttDetails() {
           </div>
         </div>
       </div>
+      <Participants show={show} handleClose={handleClose} />
     </>) }
       
     </>
