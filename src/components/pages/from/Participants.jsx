@@ -38,7 +38,7 @@ function Participants(props) {
               <label for="" className="w-100 pb-2">
                 Total Price
               </label>
-              <h4 className="form-heading"> €5000.0</h4>
+              <h4 className="form-heading"> €{props?.data}.00</h4>
               <label for="" className="w-100">
                 All taxes fees included
               </label>
