@@ -45,6 +45,7 @@ const protects = {
         { path: "/IBooking", element: <IBooking /> },
         { path: "/attractions/:id", element: <AttDetails /> },
         { path: "/attractions", element: <HotelLesting /> },
+        { path: "/attractions?search=:location", element: <HotelLesting /> },
 
         { path: "*", element: "No PAGE FOUNG" },
       ],

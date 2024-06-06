@@ -28,11 +28,26 @@ export const acttractionAction = createAsyncThunk(
     return response.data;
   }
 );
+
+
 export const acttractionActionsingle = createAsyncThunk(
   "acttractionActionsingle",
   async (payload) => {
     const response = await axiosInstance.get(
       `/attractions/${payload.id}?populate=*`
+    );
+    return response.data;
+  }
+);
+
+
+
+
+export const acttractionActionSearch= createAsyncThunk(
+  "acttractionActionSearch",
+  async (payload) => {
+    const response = await axiosInstance.post(
+      `/attractions/search?populate=*`, payload
     );
     return response.data;
   }

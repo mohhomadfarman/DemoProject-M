@@ -1,18 +1,43 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react'
+import { useDispatch } from 'react-redux';
+import { Link, useNavigate } from 'react-router-dom';
+import { acttractionActionSearch } from '../../../redux/actions/attractions';
 
 function Search(props) {
     const [value, setValue] = useState(0);
+    const [location,setLocation]=useState();
+    const [range,setRange]=useState();
 
     const handleRangeChange = (event) => {
       setValue(event.target.value);
     };
+
+const dispatch =useDispatch();
+const navigate =useNavigate()
+
+
+const handelSubmit = () =>{
+  if(props?.name === "attractions"){
+    const payload ={
+        location: location,
+        radius: value,
+        guests:range
+    }
+    dispatch(acttractionActionSearch(payload)).then((res)=>{
+      console.log(res.payload)
+      localStorage.setItem("search",res.payload)
+      navigate(`/attractions?search=${location}&radius=${value}&guest=range`)
+    })
+  }
+}
+
   return (
     <div className="row g-1">
     <div className="col-md-3">
       <div className="input-form">
         <img src="/fontistomapmarker.svg" alt="" />
         <input
+          onChange={(e)=>setLocation(e.target.value)}
           type="text"
           className="border-0"
           placeholder="Location..."
@@ -52,6 +77,7 @@ function Search(props) {
       <div className="input-form">
         <img src=" /bipeoplefill.svg" alt="" />
         <input
+         onChange={(e)=>setRange(e.target.value)}
           type="text"
           className="border-0"
           placeholder="Gäste"
@@ -61,12 +87,13 @@ function Search(props) {
       </div>
     </div>
     <div className="col-lg-2 col-md-3">
-      <Link
+      <button
+      onClick={handelSubmit}
         className="sec-btn text-decoration-none"
-        to={props?.name === "hotels" ? `/hotels` : "/attractions"}
+        // to={props?.name === "hotels" ? `/hotels` : "/attractions"}
       >
         Jetzt finden
-      </Link>
+      </button>
     </div>
   </div>
   )

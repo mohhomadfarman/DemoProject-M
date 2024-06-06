@@ -72,7 +72,7 @@ function AttDetails() {
                         <div className="location-address">
                           <span>{data?.attributes?.Select_Category}</span>
 
-                          <span>Google Bewertung 4,8</span>
+                          <span className={!data?.attributes?.Select_Category && "p-0"}>Google Bewertung 4,8</span>
                         </div>
                       </div>
                     </div>
@@ -117,25 +117,27 @@ function AttDetails() {
             </Swiper>
           </div>
 
-          <section>
+          <section className="pb-0">
             <div className="container">
               <div className="row">
                 <div className="col-md-8">
                   <p>{data?.attributes?.Content.slice(0,400)}...</p>
                 </div>
-                <div className="col-md-4">
-                  <p className="price">
-                    <span>{data?.attributes?.Base_Price} EUR</span> pro Person
+                <div className=" offse-md-1 col-md-3">
+                  <div className="ml-auto d-flex flex-column align-items-end">
+                  <p  className="price d-flex align-items-start w-100">
+                    <span style={{lineHeight:"72%"}}>{data?.attributes?.Base_Price}.00 EUR </span> &nbsp; Pro Person
                   </p>
                   <div onClick={()=>handleShow(data?.attributes?.Base_Price)} className="book-now">
-                    <Link to={""}> Send Enquiry</Link>
+                    <Link to={""} style={{whiteSpace:"nowrap"}}> Send Enquiry</Link>
+                  </div>
                   </div>
                 </div>
               </div>
             </div>
           </section>
 
-          <div class="section-content container">
+          <div class="section-content container pb-0">
             <div class="row">
               <div class="col-md-12 col-12">
                 <div class="term-item d-flex gap-3 align-items-center">
@@ -153,7 +155,7 @@ function AttDetails() {
             <div className="container">
               <div className="row">
                 <div className="col-md-12">
-                  <div className="border-new col-lg-10">
+                  <div className="border-new ">
                     <div className="highlight">
                       <h2 className="section-title">Highlight</h2>
                       <div className="section-content">
@@ -215,7 +217,7 @@ function AttDetails() {
           <section className="content_with_image_outer" name="section">
             <div className="container">
               <div className="row">
-                <div className="col-md-10">
+                <div className="col-md-12">
                   <div className="reading-section">
                     <h3>
                       Visit the Cathedral Without Standing in Line for Tickets
